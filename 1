@@ -1,3 +1,15 @@
 components of Hadoop 1.x:
 Master node:
-           It is also called as name node.it acts as a cluster admin but it does not store the dat abut it monitors and controls the data stored in slave nodes.
+         >It is also called as name node.it acts as a cluster admin but it does not store the data but it monitors 
+           and controls the data stored in slave nodes.It has a control over all the slave nodes.
+         >Since this is the only master node in hadoop 1.x ,failure of master node its a great hectic to get back the data.
+         >Thus in hadoop 2.x a backup master node is created.
+         >It knows the data files and directories and acts as a file system.
+Secondary NameNode:
+         >it helps namenode in merging of namespace and edits but it does not have a backup of masternode.
+DataNode:
+         >it stores the data in its memory for the future analysis.
+         >it sends signals for namenode for every 3 sec to remind that it is active.
+         >it sends block report to the name node for every 10 th heart beat. 
+         >it performs all the block operations including periodic checksum. 
+         >the instruction to data node are given by namenode how to place the data and where to place it.
